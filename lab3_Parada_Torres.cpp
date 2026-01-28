@@ -42,8 +42,12 @@ int main(){
     number = 3;
     number2 = 8;
     // error because comparison operators have higher precedence than shift operators
+    // fix using parenthesis to make expressions inside them be evaluated first
     // cout << number == number2 << endl; 
 
+    bool check = number != number2;
+    cout << check << endl; 
 
+    cout << "---------- Example 5: Logical Operators ----------"<< "\n";
     return 0;
 }
