@@ -8,23 +8,34 @@ Lab 3, Numerical Variables
 using namespace std;
 
 int main(){
-    cout << "---------- Example 1 ----------"<< endl;
+    cout << "---------- Example 1 ----------"<< "\n";
 
     int number = 10.9;
-    cout << "number = " << number << endl;
+    cout << "number = " << number << "\n";
 
     float n = 7.8;
-    cout << "n = " << n << endl;
+    cout << "n = " << n << "\n";
 
-    cout << "---------- Example 2: Numberical Operators ----------"<< endl;
+    cout << "---------- Example 2: Numberical Operators ----------"<< "\n";
 
     number = 5;
-    cout << "sum = "<< number + n << endl;
+    cout << "sum = "<< number + n << "\n";
 
     int number2 = 2;
     // explicit casting from int to float
     cout << "division = "<< 
-        number / static_cast<float>(number2) << endl;
+        number / static_cast<float>(number2) << "\n";
 
+    cout << "---------- Example 3: Assignment Operators ----------"<< "\n";
+    // incremental operator
+    cout << "original number = "<< number << "\n";
+    ++number;
+    cout << "updated number = "<< number << "\n";
+
+    // +=, -= Numerical and Assignment Operators
+    number = 10;
+    cout << "original number = "<< number << "\n";
+    number += 5;
+    cout << "updated number = "<< number << endl;
     return 0;
 }
