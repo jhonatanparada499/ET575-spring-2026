@@ -1,3 +1,9 @@
+/*
+Jhonatan Stiven Parada Torres
+Jan 28, 2026
+Lab assignment 1: introduction to iostream and numerical variables
+*/
+
 #include <iostream>
 using std::cout;
 using std::cin;
