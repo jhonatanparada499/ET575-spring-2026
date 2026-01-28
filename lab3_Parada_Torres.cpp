@@ -36,6 +36,14 @@ int main(){
     number = 10;
     cout << "original number = "<< number << "\n";
     number += 5;
-    cout << "updated number = "<< number << endl;
+    cout << "updated number = "<< number << "\n";
+
+    cout << "---------- Example 4: Comparison Operators ----------"<< "\n";
+    number = 3;
+    number2 = 8;
+    // error because comparison operators have higher precedence than shift operators
+    // cout << number == number2 << endl; 
+
+
     return 0;
 }
