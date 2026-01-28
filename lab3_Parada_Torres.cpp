@@ -8,12 +8,12 @@ Lab 3, Numerical Variables
 using namespace std;
 
 int main(){
-    cout << "\n---------- Example 1 ----------"<< endl;
+    cout << "---------- Example 1 ----------"<< endl;
 
     int number = 10.9;
-    float n = 7.8;
-
     cout << "number = " << number << endl;
+
+    float n = 7.8;
     cout << "n = " << n << endl;
     return 0;
 }
