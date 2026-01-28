@@ -8,7 +8,7 @@ Lab 3, Numerical Variables
 using namespace std;
 
 int main(){
-    cout << "---------- Example 1 ----------"<< "\n";
+    cout << "---------- Example 1: Numerical Data Types ----------"<< "\n";
 
     int number = 10.9;
     cout << "number = " << number << "\n";
@@ -46,7 +46,7 @@ int main(){
     // cout << number == number2 << endl; 
 
     bool check = number != number2;
-    cout << check << endl; 
+    cout << check << "\n"; 
 
     cout << "---------- Example 5: Logical Operators ----------"<< "\n";
     return 0;
