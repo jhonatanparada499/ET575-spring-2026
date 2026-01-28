@@ -49,5 +49,10 @@ int main(){
     cout << check << "\n"; 
 
     cout << "---------- Example 5: Logical Operators ----------"<< "\n";
+    number = 3;
+    number2 = 5;
+    check = number && number2;
+    cout << (check + check) << "\n"; 
+
     return 0;
 }
