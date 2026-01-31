@@ -1,2 +1,3 @@
-# ET575-spring-2026
-Hello World
+# ET575 Spring 2026
+
+Class documentation.
