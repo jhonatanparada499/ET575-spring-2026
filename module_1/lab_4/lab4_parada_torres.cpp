@@ -47,6 +47,10 @@ int main() {
   cout << "After char rep: "<< word << '\n';
 
   cout << "Example 8: String Erasement" << '\n';
+  word = "layout";
+  cout << "Original: " << word << '\n';
+  cout << "After: " << word.erase(2,2) << '\n';
+
 
   return EXIT_SUCCESS;
 }
