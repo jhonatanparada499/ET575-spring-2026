@@ -39,7 +39,14 @@ int main() {
   cout << "Example 6: String Append" << '\n';
   string fullName = "Jhonatan Parada";
   fullName.append("@neverland");
+  cout << "After append: " << fullName << '\n';
 
+  cout << "Example 7: Char Replacement" << '\n';
+  string word = "engineering";
+  word.replace(5,2,"FUTURE");
+  cout << "After char rep: "<< word << '\n';
+
+  cout << "Example 8: String Erasement" << '\n';
 
   return EXIT_SUCCESS;
 }
