@@ -1,9 +1,9 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/cpp",
-   
   "customizations": {
     "vscode": {
-      "extensions": ["vscodevim.vim"]
+      "extensions": [
+        "vscodevim.vim",
+      "ms-vscode.cpptools"]
     }
   }
 }
