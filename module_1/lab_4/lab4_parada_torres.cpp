@@ -49,7 +49,21 @@ int main() {
   cout << "Example 8: String Erasement" << '\n';
   word = "layout";
   cout << "Original: " << word << '\n';
-  cout << "After: " << word.erase(2,2) << '\n';
+  word.erase(2,3);
+  cout << "After: " << word << '\n';
+
+  cout << "Example 9: String Finding" << '\n';
+  word = "characters";
+
+  int index = word.find('a');
+  cout << "Index for a: "<< index << '\n';
+
+  cout << "Exercise" << '\n';
+
+
+
+
+
 
 
   return EXIT_SUCCESS;
