@@ -10,6 +10,8 @@ using namespace std;
 #include <string>
 #include <cstdlib>
 
+#include <format>
+
 int main() {
   cout << "Example 1: String Indexing" << '\n';
   string firstName = "Peter";
@@ -60,8 +62,7 @@ int main() {
 
   cout << "Exercise" << '\n';
 
-
-
+  cout << std::format("{:<10}\n", "Fruits");
 
 
 
