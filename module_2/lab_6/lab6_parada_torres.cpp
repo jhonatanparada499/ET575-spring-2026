@@ -51,5 +51,19 @@ int main() {
     cout << "Enter wavelength ";
     cin >> wavelength;
 
+    if (wavelength <= 379 && wavelength>=10) {
+        color = "ultraviolet";
+    } else if (wavelength <= 379 && wavelength>=380){
+        color = "blue";
+    } else if (wavelength <= 590 && wavelength>=521){
+        color = "green";
+    } else if (wavelength <= 740 && wavelength>=591){
+        color = "red";
+    } else if (wavelength <= 741){
+        color = "infrared";
+    } else {
+        color = "undefined";
+    }
+
     return EXIT_SUCCESS;
 }
