@@ -24,16 +24,24 @@ int main() {
           "----------------------------"
        << '\n';
 
-  cout << "concatenated message: " << msg << '\n';
-
   int msg_lenght = msg.length();
-  cout << "Message length: " << msg_lenght << '\n';
-
   int msg_index = msg.find("ma");
-  cout << "Index of character 'ma': " << msg_index << '\n';
 
-  cout << "Replace 'ma' with %---%: " << msg.replace(msg_index, 2, "%---%")
-       << '\n';
+  cout << "concatenated message: " << "\t\t" <<
+  msg << '\n';
+
+  cout << "Message length: " << "\t\t" <<
+  msg_lenght << '\n';
+
+  if (msg_index == -1) {
+     return 0;
+  }
+
+  cout << "Index of character 'ma': " << '\t' <<
+  msg_index << '\n';
+
+  cout << "Replace 'ma' with %---%: " << '\t' <<
+  msg.replace(msg_index, 2, "%---%") << endl;
 
   return 0;
 }
