@@ -2,7 +2,6 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "vscodevim.vim",
       "ms-vscode.cpptools"]
     }
   }
