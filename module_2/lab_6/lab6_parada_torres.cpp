@@ -27,6 +27,8 @@ int main() {
     if (num1 == num2) {
         cout << "Nums are equal" << '\n';
     }
+
+    cout << "Nums are not equal" << '\n';
     
     cout << " EXAMPLE 3" << '\n';
     if (num1 > num2) {
@@ -64,6 +66,29 @@ int main() {
     } else {
         color = "undefined";
     }
+
+    cout << "----------------- Lab Assignment -----------------" << '\n';
+    float final_exam, labs, homework;
+    char gpa;
+
+    cout << "Enter Final Exam: ";
+    cin >> final_exam;
+    cout << "Enter Labs: ";
+    cin >> labs;
+    cout << "Enter Homework: ";
+    cin >> homework;
+
+    float grade = final_exam *0.5 + labs*0.3 + homework*0.2;
+
+    if (grade < 0) { gpa = ' ';}
+    else if (grade < 60) { gpa = 'F';}
+    else if (grade < 70) { gpa = 'D';}
+    else if (grade < 80) { gpa = 'C';}
+    else if (grade < 90) { gpa = 'B';}
+    else { gpa = 'A';}
+
+    cout << "A final grade of " << grade 
+    << " is equivalent to a GPA of " << gpa << "." << '\n';
 
     return EXIT_SUCCESS;
 }
