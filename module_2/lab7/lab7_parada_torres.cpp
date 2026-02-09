@@ -12,24 +12,14 @@ int main() {
   cout << "EXAMPLE 1" << '\n';
   int number = 0;
 
-  // checks if number is either positive or negative.
-  // if false, number is zero
+  // This code was modified after learning concepts from class.
   if (number) {
     if (number > 0) {
       cout << number << " is positive and ";
-      if (number%2==0) {
-        cout << "even" << '\n';
-      }else{
-        cout << "odd" << '\n';
-      }
     } else{
       cout << number << " is negative and ";
-      if (number%2==0) {
-        cout << "even" << '\n';
-      }else{
-        cout << "odd" << '\n';
-      }
     }
+      cout << (number % 2 == 0 ? "even" : "odd") << '\n';
   }
   else {
     cout << number << " is zero" << '\n';
@@ -68,5 +58,11 @@ int main() {
     }
   }
 
+  cout << " EXAMPLE 3" << '\n';
+
+  int x = 5;
+  cout << x << " is " << (x % 2 == 0 ? "even" : "odd") << '\n';
+
+  cout << "EXERCISE" << '\n';
   return 0;
 }
