@@ -38,5 +38,35 @@ int main() {
   cout << "EXAMPLE 2" << '\n';
   int num1, num2, num3;
 
+  cout << "Enter three number: ";
+  cin >> num1 >> num2 >> num3;
+
+  if (num1>num2 && num1>num3) {
+    cout << num1 << " is the highest number" << '\n';
+    cout << num1 << '\t';
+    if (num2 > num3) {
+      cout << num2 << '\t' << num3 << '\n';
+    }else{
+      cout << num3 << '\t' << num2 << '\n';
+    }
+  }
+  else if(num2>num1 && num2>num3){
+    cout << num2 << " is the highest number" << '\n';
+    cout << num2 << '\t';
+    if (num1 > num2) {
+      cout << num1 << '\t' << num2 << '\n';
+    }else{
+      cout << num2 << '\t' << num1 << '\n';
+    }
+  } else{
+    cout << num3 << " is the highest number" << '\n';
+    cout << num3 << '\t';
+    if (num1 > num2) {
+      cout << num1 << '\t' << num2 << '\n';
+    }else{
+      cout << num2 << '\t' << num1 << '\n';
+    }
+  }
+
   return 0;
 }
