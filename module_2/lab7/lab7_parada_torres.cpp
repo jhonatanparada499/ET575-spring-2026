@@ -63,28 +63,53 @@ int main() {
   int x = 5;
   cout << x << " is " << (x % 2 == 0 ? "even" : "odd") << '\n';
 
-  cout << "EXERCISE" << '\n';
+  cout << "------ EXERCISE 1 ------" << '\n';
   int car_budget = 0;
   cout << "Enter car budget: ";
   cin >> car_budget;
   
-  // using ternary operator to handle nested condition.
   if (car_budget < 0) {
     cout << "Invalid budget!" << '\n';
-  } else if(car_budget < 10000){
+  }else if(car_budget < 10000){
     cout << "Keep saving!" << '\n';
-  } else if(car_budget < 30000){
-    cout << "Economy Car" << '\n';
-    cout << (car_budget < 20000 ? "Compact car":"Mid-sized car") << '\n';
-  } else if(car_budget < 70000){
-    cout << "Standard Car" << '\n';
-    cout << (car_budget < 50000 ? "Sedan":"Luxury Sedan") << '\n';
-  } else if(car_budget < 150000){
-    cout << "Performance-oriented Car" << '\n';
-    cout << (car_budget < 100000 ? "Sports Car":"Super Car") << '\n';
   } else{
-    cout << "High-end luxury Cars Maserati or Rolls-Royce?" << '\n';
+    cout << "With $" << car_budget << ", you can afford a(n) ";
+    if(car_budget < 30000){
+      cout << "Economy Car: ";
+      cout << (car_budget < 20000 ? "Compact Car":"Mid-sized Car") << '\n';
+    } else if(car_budget < 70000){
+      cout << "Standard Car: ";
+      cout << (car_budget < 50000 ? "Sedan":"Luxury Sedan") << '\n';
+    } else if(car_budget < 150000){
+      cout << "Performance-oriented Car: ";
+      cout << (car_budget < 100000 ? "Sports Car":"Super Car") << '\n';
+    } else{
+      cout << "High-end luxury Cars: Maserati or Rolls-Royce?" << endl;
+    }
   }
+
+  cout << "------ EXERCISE 2 ------" << '\n';
+  int n;
+  char char_choice;
+  cout << "Type a number: ";
+  cin >> n;
+  cout << "Do you want to double the number? (y/n): ";
+  cin >> char_choice;
+
+  switch (tolower(char_choice)) {
+  case 'y':
+    n *= 2; 
+    break;
+  
+  case 'n':
+    break;
+
+  default:
+    n = 0;
+    break;
+  }
+
+  cout << "The number is set to " << n << endl;
 
   return 0;
 }
