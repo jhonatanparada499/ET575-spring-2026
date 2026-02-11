@@ -87,6 +87,11 @@ int main() {
     result = first_number * second_number;
     break;
   case '/':
+    // handle division by zero
+    if (second_number == 0) {
+      cout << "Not possible to divide by zero" << endl;
+      return -1;
+    }
     result = first_number / second_number;
     break;
   case '%':
