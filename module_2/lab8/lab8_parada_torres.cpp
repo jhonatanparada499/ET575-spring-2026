@@ -109,5 +109,8 @@ int main() {
     << operation << " " << second_number 
     << " = " << result << endl;
 
+  string a = "hello";
+  a.append("he");
+  cout << a;
   return 0;
 }
