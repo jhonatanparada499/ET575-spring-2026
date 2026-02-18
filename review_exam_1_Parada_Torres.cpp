@@ -1,12 +1,13 @@
 /*
 Jhonatan Stiven Parada Torres
-Feb 11, 2026
+Feb 18, 2026
 Lab 8 
 */
 
 #include <iostream>
 #include <string>
 #include <cstdio>
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -30,20 +31,23 @@ int main() {
 
     // 4
     string college = "Queensborough Community College";
-    string keyword = "Community";
-    college.erase(college.find(keyword), keyword.length() + 1);
+    college.erase(
+        college.find("Community"),
+        string("Community").length() + 1);
     cout << college << '\n';
 
     // 5
     string shipping ="Shipping fee is Free per order";
-    keyword = "Free";
-    shipping.replace(shipping.find(keyword), keyword.length(), "$5.99");
+    shipping.replace(
+        shipping.find("Free"),
+        string("Free").length(),
+        "$5.99");
     cout << shipping << '\n';
 
     // 6
     float height, time = 10.25f;
-    const float gravity = 9.8f;
-    height = .5 * gravity * time * time;
+    const float GRAVITY = 9.8f;
+    height = .5 * GRAVITY * time * time;
     printf("%.1f\n", height);
 
     // 7
@@ -71,19 +75,19 @@ int main() {
     float midterm_exam, final_exam, lab;
     cout << "Enter 3 grades: ";
     cin >> midterm_exam >> final_exam >> lab;
-    const float final_grade = midterm_exam*0.25 + final_exam*0.4 + lab*0.35;
+    const float FINAL_GRADE = midterm_exam*0.25 + final_exam*0.4 + lab*0.35;
     string gpa;
 
-    if (final_grade < 59) {
+    if (FINAL_GRADE < 59) {
         gpa = "FAIL";
     }
-    else if (final_grade < 69) {
+    else if (FINAL_GRADE < 69) {
         gpa = "D";
     }
-    else if (final_grade < 70) {
+    else if (FINAL_GRADE < 70) {
         gpa = "C";
     }
-    else if (final_grade < 89) {
+    else if (FINAL_GRADE < 89) {
         gpa = "B";
     }
     else {
@@ -91,7 +95,7 @@ int main() {
     }
     
     cout << "--------------- RESULT ---------------" << '\n';
-    cout << "Final Grade " << final_grade << ", GPA = " << gpa << '\n';
+    cout << "Final Grade " << FINAL_GRADE << ", GPA = " << gpa << '\n';
     cout << "--------------------------------------" << '\n';
 
     // Part 2: switch statement: radio station
@@ -100,11 +104,11 @@ int main() {
     char choice;
     string station_choice;
 
-    cout << "ESPN New York  " << "A or a" << '\n';
-    cout << "Z100 New York  " << "B or b" << '\n';
-    cout << "La Mega        " << "C or c" << '\n';
-    cout << "Classic Rock   " << "D or d" << '\n';
-    cout << "WCBS News      " << "E or e" << '\n';
+    cout << "ESPN New York                           " << "A or a" << '\n';
+    cout << "Z100 New York                           " << "B or b" << '\n';
+    cout << "La Mega                                 " << "C or c" << '\n';
+    cout << "Classic Rock                            " << "D or d" << '\n';
+    cout << "WCBS News                               " << "E or e" << '\n';
 
     if(!(cin >> choice)){
         cout << "Invalid choice." << endl;
@@ -130,9 +134,8 @@ int main() {
         break;
     default:
         station_choice = "Invalid.";
-        break;
+        return -1;
     }
-    // how to trim whitespaces in vim
 
     cout << "--------------- RESULT ---------------" << '\n';
     cout << "You are listening to " << station_choice << '\n';
