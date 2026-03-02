@@ -9,6 +9,13 @@ March 2, 2026
 using namespace std;
 
 int main() {
+  cout << "------ EXAMPLE 1 ------" << '\n';
+
+  for(int i = 0; i < 5; ++i){
+    cout << "Hello" << i << '\n';
+  }
+
+  cout << "------ EXAMPLE 2 ------" << '\n';
 
   return 0;
 }
