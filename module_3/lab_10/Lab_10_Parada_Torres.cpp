@@ -9,6 +9,7 @@ March 2, 2026
 using std::cout;
 using std::cin;
 using std::endl;
+using std::cerr;
 
 int main() {
   cout << "------ EXAMPLE 1 ------" << '\n';
@@ -61,7 +62,10 @@ int main() {
   cout << "------ EXERCISE 2 ------" << '\n';
   int userNumber;
   cout << "Enter init number: ";
-  cin >> userNumber;
+  if(!(cin >> userNumber)){
+    cerr << "Invalid input." << endl;
+    return -1;
+  }
 
   for(int i = userNumber; i <= 30; i+=4){
     cout << i << '\t';
