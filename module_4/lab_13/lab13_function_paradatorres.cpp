@@ -48,8 +48,15 @@ int validatePositive(){
     return theNum;
 }
 
-int areaRectangle(int lenght, int width){
+int getAreaRectangle(int lenght, int width){
     return lenght*width;
+}
+
+void printAreaRectangle(int lenght, int width){
+    cout << "The area of rectangle "
+         << lenght << " and "
+         << width << " is "
+         << getAreaRectangle(lenght, width) << endl;
 }
 
 // EXERCISE

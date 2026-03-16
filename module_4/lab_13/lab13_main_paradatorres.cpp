@@ -26,9 +26,9 @@ int main() {
     cout << tripleNum(5) << '\n';
 
     cout << "EXAMPLE 4" << '\n';
-    cout << "-12 " << checkNum(-12) << '\n';
-    cout << "4 " << checkNum(4) << '\n';
-    cout << "0 " << checkNum(0) << '\n';
+    cout << "-12 is "<< checkNum(-12) << '\n';
+    cout << "4 is "<< checkNum(4) << '\n';
+    cout << "0 is "<< checkNum(0) << '\n';
 
     cout << "EXAMPLE 5" << '\n';
     int num = validatePositive();
@@ -37,8 +37,10 @@ int main() {
     cout << "EXAMPLE 6" << '\n';
     int length = validatePositive();
     int width = validatePositive();
-    int area_rec = areaRectangle(length, width);
+    int area_rec = getAreaRectangle(length, width);
     cout << area_rec << '\n';
+
+    printAreaRectangle(length, width);
 
     cout << "EXERCISE" << '\n';
     printIsEven(4);
