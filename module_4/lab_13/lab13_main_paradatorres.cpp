@@ -15,5 +15,16 @@ using std::endl;
 int main() {
     cout << "EXAMPLE 1" << '\n';
     printHello();
+
+    cout << "EXAMPLE 2" << '\n';
+    greeting("Peter");
+    greeting("Annie");
+
+    cout << "EXAMPLE 3" << '\n';
+    tripleNum(3);
+
+    cout << "EXERCISE" << '\n';
+    printIsEven(4);
+
     return 0;
 }
