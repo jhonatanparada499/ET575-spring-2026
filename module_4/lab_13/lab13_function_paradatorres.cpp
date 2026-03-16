@@ -25,10 +25,6 @@ int tripleNum(int theNum){
     return theNum*3;
 }
 
-bool isEven(int theNum){
-    return !(theNum % 2);
-}
-
 std::string checkNum(int theNum){
     if (theNum < 0){ return "negative"; }
     return theNum? "positive":"zero";
@@ -60,6 +56,11 @@ void printAreaRectangle(int lenght, int width){
 }
 
 // EXERCISE
+
+bool isEven(int theNum){
+    return !(theNum % 2);
+}
+
 void printIsEven(int theNum){
     cout << "Is " << std::to_string(theNum)
          << " even? "
