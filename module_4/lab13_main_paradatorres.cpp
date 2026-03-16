@@ -14,5 +14,6 @@ using std::endl;
 
 int main() {
     cout << "EXAMPLE 1" << '\n';
+    printHello();
     return 0;
 }
