@@ -21,7 +21,24 @@ int main() {
     greeting("Annie");
 
     cout << "EXAMPLE 3" << '\n';
-    tripleNum(3);
+    int n = tripleNum(3);
+    cout << n << '\n';
+    cout << tripleNum(5) << '\n';
+
+    cout << "EXAMPLE 4" << '\n';
+    cout << "-12 " << checkNum(-12) << '\n';
+    cout << "4 " << checkNum(4) << '\n';
+    cout << "0 " << checkNum(0) << '\n';
+
+    cout << "EXAMPLE 5" << '\n';
+    int num = validatePositive();
+    cout << num << '\n';
+
+    cout << "EXAMPLE 6" << '\n';
+    int length = validatePositive();
+    int width = validatePositive();
+    int area_rec = areaRectangle(length, width);
+    cout << area_rec << '\n';
 
     cout << "EXERCISE" << '\n';
     printIsEven(4);
