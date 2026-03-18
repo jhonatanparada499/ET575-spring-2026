@@ -14,6 +14,7 @@ using std::cerr;
 int main()
 {
   cout << "------ EXAMPLE 1 ------" << '\n';
+
   int i = 0;
   while (i<=5)
   {
@@ -23,6 +24,7 @@ int main()
 	cout << '\n';
 
   cout << "------ EXAMPLE 2 ------" << '\n';
+
   int m = 3;
   while (m>=0)
   {
@@ -32,6 +34,7 @@ int main()
 	cout << '\n';
 
   cout << "------ EXAMPLE 3 ------" << '\n';
+
   m = 3;
   while (m-- >=0)
   {
@@ -40,6 +43,7 @@ int main()
 	cout << '\n';
 
   cout << "------ EXAMPLE 4 ------" << '\n';
+
   m = 3;
   while (--m >=0)
   {
@@ -48,6 +52,7 @@ int main()
 	cout << '\n';
 
   cout << "------ EXAMPLE 5 ------" << '\n';
+
   int n;
   cout << "Enter a number: ";
   cin >> n;
@@ -59,6 +64,7 @@ int main()
   cout << "Entered num: " << n << '\n';
 
   cout << "------ EXAMPLE 6 ------" << '\n';
+
   char choice = 'y';
   do
   {
@@ -72,6 +78,7 @@ int main()
   } while (tolower(choice) == 'y');
   
   cout << "------ EXAMPLE 7 ------" << '\n';
+
   int number;
   do
   {
@@ -80,6 +87,7 @@ int main()
   } while (number <= 0);
   
   cout << "------ EXAMPLE 8 ------" << '\n';
+
   int loopCounter = 1, sumNegative = 0, num;
   do
   {
@@ -99,6 +107,7 @@ int main()
   cout << "Total sum: " << sumNegative << '\n';
   
   cout << "------ EXAMPLE 9 ------" << '\n';
+
   int balance = 1000, w = 0;
   cout << "Current balance: " << balance << '\n';
   while (true)
@@ -121,7 +130,8 @@ int main()
     }
   }
   
-  cout << "------ EXERCISE 1 ------" << '\n'; 
+  cout << "------ EXERCISE 1 ------" << '\n';
+ 
   int userNumber = 0, userSum = 0;
   cout << "Enter a number: ";
   while ((cin >> userNumber) && userNumber)
