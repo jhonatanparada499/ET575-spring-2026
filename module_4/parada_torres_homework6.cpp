@@ -16,7 +16,9 @@ int main() {
   int var = 7;
   int foo = 22;
   ptr = &var;
+  ptr = &foo;
+  int &ref = var;
 
-  cout << ptr << '\n';
+  cout << "ref = " << ref << endl;
   return 0;
 }
