@@ -12,6 +12,19 @@ using std::cout;
 using std::endl;
 
 int main() {
+    cout << "Example 1" << '\n';
+    cout << randomNumber(5, 20) << '\n';
 
-  return 0;
+    cout << "Example 2" << '\n';
+    cout << randomNumber(0, 10) << '\n';
+
+    cout << "Example 3" << '\n';
+    cout << randomNumber(5, 12) << '\n';
+
+    cout << "Example 4" << '\n';
+    int roll1 = rollDice(), roll2 = rollDice();
+    bool result = matchDices(roll1, roll2);
+    printDices(roll1, roll2, result);
+
+    return 0;
 }
