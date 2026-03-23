@@ -7,6 +7,7 @@ March 23, 2026
 #include <cstdio>
 #include <iostream>
 #include <ctime>
+#include <random>
 
 // using std::cerr;
 using std::cin;
@@ -20,8 +21,13 @@ int randomNumber(int min, int max){
 }
 
 int rollDice(){
-    srand(std::time(0));
-    return 1 + rand() % 6;
+    std::random_device dev;
+    std::mt19937 rng(dev());
+
+    std::uniform_int_distribution<std::mt19937::result_type> dist6(
+            1,6); // distribution in range [1, 6]
+
+    return dist6(rng);
 }
 
 bool matchDices(int roll1, int roll2){
