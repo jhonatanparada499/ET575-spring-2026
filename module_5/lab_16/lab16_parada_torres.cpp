@@ -5,9 +5,13 @@ April 13, 2026
 
 #include <iostream>
 #include <string>
-#include "lab16_function_parada_torres.cpp"
 
-using namespace std;
+#include "lab16_function_parada_torres.h"
+
+using std::size;
+using std::string;
+using std::cout;
+using std::endl;
 
 int main() {
     cout << "EXAMPLE 1" << '\n';
@@ -22,17 +26,16 @@ int main() {
     cout << "EXAMPLE 3" << '\n';
     introArray();
 
+    cout << "EXAMPLE 4" << '\n';
+    lengthArray();
+
+    cout << "EXAMPLE 5" << '\n';
+    loopArray();
+
     cout << "EXERCISE" << '\n';
 
     // declare an array with 6 values ==> fixed length array
-    int scores[5];
-
-    // assign value to each item in array 'scores'
-    scores[0] = 60;
-    scores[1] = 90;
-    scores[2] = 75;
-    scores[3] = 88;
-    scores[4] = 100;
+    int scores[5] = {60, 90, 75, 88, 100};
 
     int max = 0;
     for(int i = 0; i < size(scores); ++i){
