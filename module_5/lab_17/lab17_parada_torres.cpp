@@ -1,9 +1,10 @@
-#include <iostream>
-using std::cout;
 /*
 Jhonatan Stiven Parada Torres
 April 16, 2026
 */
+
+#include <iostream>
+using std::cout;
 
 int sumEvenNumbers(int theArr[], int theSize) {
   int sum = 0;
