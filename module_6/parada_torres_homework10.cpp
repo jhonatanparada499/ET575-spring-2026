@@ -8,83 +8,82 @@ May 4, 2026
 #include <string>
 using namespace std;
 
-void read_file(string theFileName) {
-  ifstream fin;
-  fin.open(theFileName);
+void read_file(ifstream &finObj, string theFileName) {
+  finObj.open(theFileName);
 
-  if (fin.fail()) {
+  if (finObj.fail()) {
     cout << theFileName << " doesn't exist." << '\n';
     exit(1);
   }
 
   string line;
-  while (getline(fin, line)) {
-    cout << line << '\n';
+  while (getline(finObj, line)) {
+    cout << line << endl;
   }
-  fin.close();
+  finObj.close();
 }
 
-int count_all_words(string theFileName){
-  int total_words, word;
-  ifstream fin;
-  fin.open(theFileName);
-  if (fin.fail()) {
+int count_all_words(ifstream &finObj, string theFileName) {
+  int total_words;
+  finObj.open(theFileName);
+  if (finObj.fail()) {
     cout << theFileName << " doesn't exist." << '\n';
     exit(1);
   }
 
-  while (fin >> word){ ++total_words; }
-  fin.close();
+  string word;
+  while (finObj >> word) {
+    ++total_words;
+  }
 
+  finObj.close();
   return total_words;
 }
 
-int count_one_word(string theFileName, string theWord){
+int count_one_word(ifstream &finObj, string theFileName, string theWord) {
   int total_words;
 
-  ifstream fin;
-  fin.open(theFileName);
-  if (fin.fail()) {
+  finObj.open(theFileName);
+  if (finObj.fail()) {
     cout << theFileName << " doesn't exist." << '\n';
     exit(1);
   }
-  
+
   string word;
-  while (fin >> word){ 
-    if (word == theWord) {
+  while (finObj >> word) {
+    if (word.find(theWord) != string::npos) {
       ++total_words;
     }
+    word = "";
   }
 
+  finObj.close();
   return total_words;
 }
 
-void append_to_file(string theFileName, string theMessage){
-  ofstream fout;
-  fout.open(theFileName, ios::app);
-  fout << theMessage;
-  fout.close();
+void append_to_file(ofstream &foutObj, string theFileName, string theMessage) {
+  foutObj.open(theFileName, ios::app);
+  foutObj << theMessage;
+  foutObj.close();
 }
 
 int main() {
   string fileName = "wordcounts.txt";
   string inputFile = "Remembering_Earth.txt";
-
-  read_file(inputFile);
-
-  append_to_file(
-    fileName,
-    "Parada Torres\nTotal words: " + 
-      to_string(count_all_words(inputFile)) + '\n'
-  );
-
   string word = "Earth";
-  append_to_file(
-    fileName,
-    "The word " + word + " appears " + 
-      to_string(count_one_word(inputFile, word)) +
-        " times in the document." + '\n'
-  );
 
+  ifstream fin;
+  ofstream fout;
+
+  read_file(fin, inputFile);
+
+  int word_counts = count_all_words(fin, inputFile);
+  string msg1 = "Parada Torres\nTotal words: " + to_string(word_counts) + '\n';
+  append_to_file(fout, fileName, msg1);
+
+  int target_word_count = count_one_word(fin, inputFile, word);
+  string msg2 = "The word " + word + " appears " +
+                to_string(target_word_count) + " times in the doc." + '\n';
+  append_to_file(fout, fileName, msg2);
   return 0;
 }
